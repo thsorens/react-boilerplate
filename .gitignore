@@ -1,0 +1,17 @@
+.DS_Store
+tests/scripts/
+docs
+.sass-cache
+npm-debug.log
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+node_modules
+/_
+/dist
+/build/dist
+/.idea
+npm-debug.log.*
