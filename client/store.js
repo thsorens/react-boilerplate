@@ -1,7 +1,6 @@
 import {combineReducers, createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
-
-import user from 'pages/login/reducer';
+import layout from 'pages/layout/reducer';
 
 const enhancers = [applyMiddleware(thunk)];
 
@@ -14,7 +13,7 @@ const enhancer = compose(
 );
 
 const rootReducer = combineReducers({
-  user
+  layout
 });
 
 const app = createStore(rootReducer, enhancer);

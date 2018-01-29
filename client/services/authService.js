@@ -1,5 +1,4 @@
-﻿'use strict';
-import Config from '../config';
+﻿import Config from '../config';
 import AbstractService from './abstractService';
 
 const urls = {

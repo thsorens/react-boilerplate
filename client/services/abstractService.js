@@ -1,6 +1,4 @@
-﻿'use strict';
-import Request from 'superagent';
-import LegacyIESupport from './legacy';
+﻿import Request from 'superagent';
 import config from '../config';
 import Store from 'store';
 
@@ -55,8 +53,7 @@ class AbstractService {
 
     if (httpMethod === "postForm") {
       req = Request.post(absoluteUrl)
-        .timeout(config.runtime.apiTimeoutMs)
-        .use(LegacyIESupport);
+        .timeout(config.runtime.apiTimeoutMs);
 
       if (data) {
         Object.keys(data).forEach((key) => {
@@ -67,7 +64,6 @@ class AbstractService {
     } else if (httpMethod === "postFile") {
       req = Request.post(absoluteUrl)
         .timeout(config.runtime.apiTimeoutMs)
-        .use(LegacyIESupport)
         .set('Accept', this.acceptContentType);
 
       req.attach('file', file, file.name);
@@ -76,7 +72,6 @@ class AbstractService {
       req = Request[httpMethod](absoluteUrl)
         .timeout(config.runtime.apiTimeoutMs)
         .set('Accept', this.acceptContentType)
-        .use(LegacyIESupport);
     }
     if (data) {
       req.send(data);

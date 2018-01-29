@@ -1,11 +1,11 @@
 import React, {PureComponent} from 'react';
-import {Alert} from 'react-bootstrap';
+import {Alert} from 'reactstrap';
 
 export default class Page404 extends PureComponent {
   render(){
     return(
       <div>
-        <Alert bsStyle="danger">
+        <Alert>
           <h3>Page not found</h3>
         </Alert>
       </div>

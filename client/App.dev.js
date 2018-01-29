@@ -3,7 +3,6 @@ import React from 'react';
 import {render} from 'react-dom';
 import { Provider } from 'react-redux';
 import Layout from 'pages/layout';
-import 'styles/Site.scss';
 import store from 'store';
 
 render(

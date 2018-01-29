@@ -1,5 +1,4 @@
-﻿'use strict';
-const devBase = "http://localhost:3492/";
+﻿const devBase = "http://localhost:3492/";
 const prodBase = "https://someserver.no/";
 
 const dev = {
